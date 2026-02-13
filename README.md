@@ -102,6 +102,84 @@ const styles = StyleSheet.create({
 export default Example;
 ```
 
+## Local Development / Testing
+
+To test this package in a local React Native project without publishing:
+
+### Option 1: npm link
+
+```bash
+# In this package's directory
+cd react-native-legend-reorderable-list
+npm link
+
+# In your test project
+npm link react-native-legend-reorderable-list
+```
+
+### Option 2: Yarn workspace
+
+Add to your project's `package.json`:
+
+```json
+{
+  "workspaces": {
+    "packages": [
+      "path/to/react-native-legend-reorderable-list"
+    ]
+  }
+}
+```
+
+Then run `yarn install` in your project root.
+
+### Option 3: Direct import
+
+Copy the `src` folder into your project:
+
+```bash
+cp -r react-native-legend-reorderable-list/src your-project/src/components/
+```
+
+Then import directly:
+
+```tsx
+import { ReorderableList } from './components/ReorderableList';
+```
+
+### Required: Babel Config
+
+Reanimated requires babel configuration. Add to your `babel.config.js`:
+
+```js
+module.exports = {
+  presets: ['module:@react-native/babel-preset'],
+  plugins: ['react-native-reanimated/plugin'], // Add this line
+};
+```
+
+**Note:** If using reanimated v4, you may need `'react-native-worklets/plugin'` instead. Check reanimated docs for your version.
+
+### Example Test Project
+
+```bash
+# Create a fresh RN project
+npx react-native@latest init TestProject
+cd TestProject
+
+# Install dependencies
+npm install @legendapp/list react-native-reanimated react-native-gesture-handler
+
+# Link this package (using npm link or yarn workspace)
+cd ../
+npm link react-native-legend-reorderable-list
+
+# Run the app
+cd TestProject
+npm start
+# Then press 'a' for Android or 'i' for iOS
+```
+
 ## License
 
 MIT
