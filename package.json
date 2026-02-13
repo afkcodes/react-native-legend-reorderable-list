@@ -1,0 +1,34 @@
+{
+  "name": "react-native-legend-reorderable-list",
+  "version": "1.0.0",
+  "description": "A reorderable list for React Native powered by LegendList and Reanimated",
+  "main": "src/index.tsx",
+  "types": "src/index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "reorderable",
+    "drag-drop",
+    "legendlist",
+    "reanimated"
+  ],
+  "author": "afkcodes",
+  "license": "MIT",
+  "peerDependencies": {
+    "@legendapp/list": ">=2.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.72.0",
+    "react-native-gesture-handler": ">=2.12.0",
+    "react-native-reanimated": ">=3.12.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/afkcodes/react-native-legend-reorderable-list.git"
+  }
+}
