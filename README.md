@@ -26,8 +26,8 @@ yarn add react-native-legend-reorderable-list
 Then you need to install these peer dependencies:
 
 - [LegendList](https://www.legendapp.com/open-source/list/) >= 2.0.0
-- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated) >= 3.12.0
-- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler) >= 2.12.0
+- [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated) >= 3.12.0 (recommended: 4.x)
+- [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler) >= 2.20.0
 
 ## Usage
 
