@@ -72,4 +72,7 @@ export interface ReorderableListProps<T> {
   onEndReachedThreshold?: number;
   refreshing?: boolean;
   onRefresh?: () => void;
+  
+  // Allow additional LegendList props
+  [key: string]: any;
 }

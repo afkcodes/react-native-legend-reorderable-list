@@ -56,6 +56,7 @@ export function ReorderableList<T>({
   onEndReachedThreshold,
   refreshing,
   onRefresh,
+  ...rest
 }: ReorderableListProps<T>) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [targetIndex, setTargetIndex] = useState<number | null>(null);
@@ -202,6 +203,8 @@ export function ReorderableList<T>({
       onRefresh={onRefresh}
       onScroll={handleScroll}
       scrollEventThrottle={16}
+      itemLayoutAnimation={itemLayoutAnimation}
+      {...rest}
     />
   );
 }
